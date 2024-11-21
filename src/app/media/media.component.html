@@ -1,0 +1,30 @@
+<mat-card class="cover-card">
+    <img mat-card-image src="/img/paraninfo_ucb.jpg" alt="Imagen de portada" />
+    <mat-card-content>
+      <h1>Experience</h1>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="section4">
+    <mat-card-title id="main_title">
+        Experience
+    </mat-card-title>
+        <div class="menu">
+            <div class="filter-buttons">
+                <button (click)="filterPhotos('all')">All</button>
+                <button (click)="filterPhotos('cultureAndTraditions')">Culture and Traditions</button>
+                <button (click)="filterPhotos('learning')">Learning</button>
+                <button (click)="filterPhotos('adventuresAndExplorations')">Adventures and Explorations</button>
+            </div>
+        </div>
+        <div>
+            <div class="gallery">
+                <ng-container *ngFor="let photo of photos">
+                    <div class="photo" *ngIf="isPhotoVisible(photo['tags'])">
+                        <img [src]="photo['src']" [alt]="photo['alt']">
+                        <span class="tag">{{ photo['name'] }}</span>
+                    </div>
+                </ng-container>
+            </div>
+    </div>
+</mat-card>

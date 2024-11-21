@@ -1,0 +1,99 @@
+<mat-card class="cover-card">
+    <img mat-card-image src="/img/families.png" alt="Imagen de portada" />
+    <mat-card-content>
+        <h1>Family Sponsors</h1>
+    </mat-card-content>
+</mat-card>
+<mat-card-title id="main_title">
+    Family Experiences
+</mat-card-title>
+<mat-card id="section2" class="c1">
+    <mat-card-content class="card-content">
+        <mat-list>
+            <p>
+                The students from the University of Mississippi are placed with carefully selected Bolivian host
+                families.
+            </p>
+            <p>
+                Students from the University of Mississippi live with Bolivian families.
+            </p>
+        </mat-list>
+    </mat-card-content>
+    <mat-card-content class="card-content">
+        <img src="img/family4.jpg" alt="Image" class="img1">
+    </mat-card-content>
+
+</mat-card>
+
+<mat-card id="section2" class="c2">
+    <mat-card-content class="card-content">
+        <img src="img/family2.jpg" alt="Image" class="img1">
+    </mat-card-content>
+    <mat-card-content class="card-content">
+
+        <p>
+            Students from the University of Mississippi live with Bolivian families.
+        </p>
+        <p>
+            Through this daily interaction, strong and meaningful relationships are formed between Bolivian families and
+            students.
+        </p>
+        <p>
+            Students have the opportunity to learn the Aymara language, strengthening their connection to local
+            communities and their culture.
+
+        </p>
+
+        <p>
+            This program promotes intercultural understanding, expanding global perspectives and encouraging
+            collaboration between cultures.
+        </p>
+
+        <p>
+            Students from the University of Mississippi live with Bolivian families.
+        </p>
+    </mat-card-content>
+</mat-card>
+<mat-card id="section2" class="c1">
+    <mat-card-content class="card-content">
+        <mat-list>
+            <p>
+                This immersive experience fosters intercultural understanding, broadens global perspectives, and
+                promotes cross-cultural collaboration. By learning the Aymara language, students strengthen their
+                connection to local communities and their culture, forging lasting and enriching bonds. This
+                transformative journey fosters personal growth and prepares students for an increasingly globalized
+                world.
+            </p>
+            <p>
+                Imagine living with a Bolivian family, learning Aymara, and diving headfirst into a whole new culture.
+                It's like hitting the reset button on your brain! You'll make lifelong friends, try new foods, and gain
+                a whole new perspective on the world.
+            </p>
+        </mat-list>
+    </mat-card-content>
+    <mat-card-content class="card-content">
+        <img src="img/lama.jpg" alt="Image" class="img1">
+    </mat-card-content>
+
+</mat-card>
+
+<mat-card id="section5" class="c2">
+    <mat-card-title id="main_title">
+        Testimonials
+    </mat-card-title>
+    <mat-tab-group class="testimonial-carousel" animationDuration="500ms">
+        <!-- Recorre una lista de testimonios -->
+        <mat-tab *ngFor="let testimonial of testimonials">
+          <ng-template mat-tab-label>
+            <div class="testimonial-header">
+              <img [src]="testimonial.image" alt="Foto de perfil" class="avatar" />
+            </div>
+          </ng-template>
+          <div class="testimonial-content">
+            <h2>{{ testimonial.title }}</h2>
+            <h3>Estudiante: {{ testimonial.subtitle }}</h3>
+            <p>{{ testimonial.content }}</p>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+</mat-card>

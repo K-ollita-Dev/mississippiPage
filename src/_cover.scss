@@ -1,0 +1,68 @@
+.cover-card {
+  position: relative;
+  height: var(--cover-height-desktop);
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: var(--cover-height-tablet);
+  }
+
+  @media (max-width: 480px) {
+    height: var(--cover-height-mobile);
+  }
+
+  // Imagen principal
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.9); // Hace la imagen más oscura
+  }
+
+  // Capa oscurecida
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); // Capa negra semitransparente
+    z-index: 1; // Asegura que esté sobre la imagen pero detrás del contenido
+  }
+
+  // Contenido del texto
+  mat-card-content {
+      position: absolute;
+      align-self: center;
+      bottom: 20px;
+      color: var(--cover-content-color);
+      padding: var(--cover-content-padding-desktop);
+      border-radius: var(--cover-content-border-radius);
+      z-index: 2; // Asegura que el contenido esté por encima del overlay
+      max-width: 80%;
+
+    @media (max-width: 768px) {
+      padding: var(--cover-content-padding-mobile);
+      font-size: 1.5rem;
+      text-align: center;
+      h1{
+          font-size: 2.5rem;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+      padding: var(--cover-content-padding-mobile);
+      text-align: center;
+      h1{
+          font-size: 1.5rem;
+      }
+    }
+  }
+}
+h1{
+    color: var(--textImage-color);
+}
+

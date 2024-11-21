@@ -1,0 +1,175 @@
+<mat-card class="cover-card">
+    <img mat-card-image src="/img/Home.jpg" alt="Imagen de portada" />
+    <mat-card-content>
+      <h1>Fulbright-Hays in Bolivia</h1>
+    </mat-card-content>
+</mat-card>
+<mat-card-title id="main_title">
+    Fulbright-Hays Student Exchange Program in Bolivia 2024
+</mat-card-title>  
+<mat-card id="section1">
+  <mat-card-content class="card-content" >
+    <img mat-card-image src="/img/Home_OleMiss.jpg" alt="Ole Miss" style="margin-top: 0;" />
+    <mat-list>
+      <p>
+          "A rich, hands-on immersion in Bolivia’s diverse traditions, landscapes, and communities."
+      </p>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-content class="card-content">
+    <img mat-card-image src="/img/Dakar_home.jpg" alt="Dakar_Uyuni Salt" style="margin-top: 16px;" />
+    <mat-list>
+      <p>
+          "An unforgettable experience of learning and cultural exchange"
+      </p>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+<mat-card-title id="main_title">
+  Fulbright-Hays Program
+</mat-card-title> 
+
+<mat-card id="section2">
+  <mat-card-content class="card-content" >
+      <iframe class="video" src="/video/intro_home.mp4"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
+  </mat-card-content>
+  <mat-card-content class="card-content">
+    <mat-list>
+      <p>
+          The winter program in Bolivia offers an immersive learning experience that combines cultural,
+          educational, and adventure activities.
+      </p>
+      <p>
+          Coordinated by the Universidad Católica Boliviana "San Pablo" and the University of Mississippi,
+          this program is designed for students interested in exploring Bolivia's rich cultural and
+          natural heritage while learning about politics, health, and social movements in the Andes.
+      </p>
+      <p>
+          Live the reality of the Andes and Bolivian society through direct interaction with local cultures
+
+      </p>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+<mat-card-title id="main_title">
+  University Experience
+</mat-card-title>
+
+<mat-card id="section3">
+  <mat-card-content class="card-content" id="c1">
+      <img src="img/Clases1.jpg" alt="Image" class="img1">
+      <mat-card-subtitle id="subtitle">In Person Classess</mat-card-subtitle>
+      <p>
+          This interdisciplinary program, developed in collaboration with the Catholic University, La
+          Paz campus, offers University of Mississippi students the opportunity to deepen their academic knowledge
+          through specialized classes. In these sessions, led by expert instructors, key topics such as health,
+          politics, and community research will be addressed. Students will develop a solid theoretical foundation
+          covering essential aspects of Andean and Amazonian cultures, as well as Bolivian society as a whole.
+          These classes provide the intellectual tools necessary for students to critically and analytically
+          understand the challenges and realities of the country.
+      </p>
+  </mat-card-content>
+  <mat-card-content class="card-content" id="c2">
+      <img src="img/virtualClasses.jpg" alt="Image" class="img1">
+      <mat-card-subtitle id="subtitle">Virtual Classess</mat-card-subtitle>
+      <!-- matsubtitle -->
+      <p>
+          Complementing classroom learning, students will participate in visits to some of Bolivia’s most iconic
+          destinations, such as the Uyuni Salt Flats, Madidi National Park, the city of Potosí, and Lake Titicaca.
+          These on-site experiences, organized in collaboration with the Catholic University of Bolivia, La Paz
+          campus, will not only allow students to appreciate the country’s rich natural and cultural heritage but
+          also offer them the opportunity to apply their knowledge in a practical setting. Through specialized
+          workshops at each location, students will experience Bolivian reality firsthand, blending adventure with
+          academic learning. This hands-on approach will foster a deeper, more immersive understanding of
+          Bolivia’s social, political, and cultural dynamics.
+      </p>
+  </mat-card-content>
+</mat-card> 
+
+
+<mat-card id="section4">
+  <mat-card-title id="main_title">
+      Experience
+  </mat-card-title>
+      <div class="menu">
+          <div class="filter-buttons">
+              <button (click)="filterPhotos('all')">All Photos</button>
+              <button (click)="filterPhotos('cultureAndTraditions')">Culture and Traditions</button>
+              <button (click)="filterPhotos('learning')">Learning</button>
+              <button (click)="filterPhotos('adventuresAndExplorations')">Adventures and Explorations</button>
+          </div>
+      </div>
+      <div>
+          <div class="gallery">
+              <ng-container *ngFor="let photo of photos">
+                  <div class="photo" *ngIf="isPhotoVisible(photo['tags'])">
+                      <img [src]="photo['src']" [alt]="photo['alt']">
+                      <span class="tag">{{ photo['name'] }}</span>
+                  </div>
+              </ng-container>
+          </div>
+  </div>
+
+        <!-- Botón centrado -->
+        <button mat-fab extended>Go to Gallery to view more photos og the Fulbright-Hays Program</button>
+
+    
+</mat-card>
+<mat-card id="section5">
+  <mat-card-title id="main_title">
+      Testimonials
+  </mat-card-title>
+  <mat-tab-group class="testimonial-carousel" animationDuration="500ms">
+      <!-- Recorre una lista de testimonios -->
+      <mat-tab *ngFor="let testimonial of testimonials">
+        <ng-template mat-tab-label>
+          <div class="testimonial-header">
+              <p id="tab_title">{{ testimonial.title }}</p>
+          </div>
+        </ng-template>
+        <br/>
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <img [src]="testimonial.image" alt="Foto de perfil" class="avatar" />
+          </div>
+          <h2>{{ testimonial.title }}</h2>
+          <p>{{ testimonial.content }}</p>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+</mat-card>
+
+<mat-card-title id="main_title">
+  Aditional Information
+</mat-card-title>
+<mat-card id="section6">
+      <mat-card-content class="card-content" >
+      <iframe class="video" src="/video/intro_home.mp4"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
+  </mat-card-content>
+  <mat-card-content class="card-content">
+    <mat-list>
+      <p>
+          What is included in the program?
+      </p>
+      <p>
+          Coordinated by the Universidad Católica Boliviana "San Pablo" and the University of Mississippi,
+          this program is designed for students interested in exploring Bolivia's rich cultural and
+          natural heritage while learning about politics, health, and social movements in the Andes.
+      </p>
+      <p>
+          Live the reality of the Andes and Bolivian society through direct interaction with local cultures
+
+      </p>
+    </mat-list>
+  </mat-card-content>        
+</mat-card>
