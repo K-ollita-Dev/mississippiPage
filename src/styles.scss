@@ -126,6 +126,8 @@ body{
     justify-content: center; 
     gap: 0px;
     padding: 10px 0;
+    color: var(--textp-color)!important;
+    font-size: 1.3rem;
 }
 
 .filter-buttons button {
@@ -133,14 +135,14 @@ body{
     padding: 10px 20px;
     cursor: pointer;
     border: none;
-    background-color: #007bff;
+    background-color: #007bff ;
     color: white;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .filter-buttons button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3 !important;
 }
 
 .gallery {
