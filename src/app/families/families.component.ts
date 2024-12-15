@@ -79,4 +79,31 @@ export class FamiliesComponent {
     }
   ];
 
+  currentTestimonialIndex = 0;
+  interval: any;
+
+  ngOnInit(): void {
+    this.startAutoSlide();
+  }
+
+  startAutoSlide(): void {
+    this.interval = setInterval(() => {
+      this.nextTestimonial();
+    }, 5000); // Cambia cada 5 segundos
+  }
+
+  stopAutoSlide(): void {
+    clearInterval(this.interval);
+  }
+
+  nextTestimonial(): void {
+    this.currentTestimonialIndex =
+      (this.currentTestimonialIndex + 1) % this.testimonials.length;
+  }
+
+  previousTestimonial(): void {
+    this.currentTestimonialIndex =
+      (this.currentTestimonialIndex - 1 + this.testimonials.length) % this.testimonials.length;
+  }
+
 }

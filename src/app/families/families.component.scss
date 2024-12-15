@@ -55,7 +55,8 @@
 
 
   #section5 {
-    margin-top: 3%;
+    margin-top: 9%;
+    padding: 9%;
     padding-bottom: 7%;
     height: 550px;
     display: flex;
@@ -112,3 +113,67 @@
         color: var(--second-color) !important;
     }
   }
+
+  
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    .testimonial {
+      text-align: center;
+  
+      .testimonial-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+  
+      .testimonial-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+      }
+  
+      .testimonial-content {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        color: #666;
+      }
+    }
+  
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+  
+      button {
+        padding: 10px 20px;
+        border: none;
+        background-color: var(--second-color);
+        // espacio entre botones
+        margin: 0 10px;
+        color: #fff;
+        font-size: 1.0rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+  

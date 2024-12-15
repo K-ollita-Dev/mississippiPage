@@ -81,19 +81,19 @@
     <mat-card-title id="main_title">
         Testimonials
     </mat-card-title>
-    <mat-tab-group class="testimonial-carousel" animationDuration="500ms">
-        <!-- Recorre una lista de testimonios -->
-        <mat-tab *ngFor="let testimonial of testimonials">
-          <ng-template mat-tab-label>
-            <div class="testimonial-header">
-              <img [src]="testimonial.image" alt="Foto de perfil" class="avatar" />
-            </div>
-          </ng-template>
-          <div class="testimonial-content">
-            <h2>{{ testimonial.title }}</h2>
-            <h3>Estudiante: {{ testimonial.subtitle }}</h3>
-            <p>{{ testimonial.content }}</p>
-          </div>
-        </mat-tab>
-      </mat-tab-group>
+    <div class="carousel">
+        <div class="testimonial" *ngIf="testimonials[currentTestimonialIndex]">
+          <img
+            [src]="testimonials[currentTestimonialIndex].image"
+            alt="Testimonial Image"
+            class="testimonial-image"
+          />
+          <h2 class="testimonial-title">{{ testimonials[currentTestimonialIndex].title }}</h2>
+          <p class="testimonial-content">{{ testimonials[currentTestimonialIndex].content }}</p>
+        </div>
+        <div class="controls">
+          <button (click)="previousTestimonial()">&#9664; Prev</button>
+          <button (click)="nextTestimonial()">Next &#9654;</button>
+        </div>
+      </div>
 </mat-card>

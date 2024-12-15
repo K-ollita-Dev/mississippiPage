@@ -5,6 +5,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule, Routes } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -16,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatListModule,
     MatTabsModule,
     MatButtonModule,
+    RouterModule,
  
   ],
   templateUrl: './home.component.html',
@@ -76,5 +78,31 @@ export class HomeComponent {
       content: '"My time in Bolivia was a transformative experience that changed my perspective and solidified my professional aspirations. Before arriving, I used to be quite introverted and spent a lot of time alone, but living with a host family and being surrounded by the Waliki Friends helped me become more sociable and happy. Visits to places like Uyuni and Madidi were highlights of my trip; they allowed me to connect deeply with Bolivian culture and landscapes. This experience also helped me understand the challenges in the healthcare system, especially in rural areas, reinforcing my interest in medicine and a humanistic approach to healthcare. I am deeply grateful to the UCB and everyone who made this unforgettable experience possible."'
     }
   ];
+  currentTestimonialIndex = 0;
+  interval: any;
+
+  ngOnInit(): void {
+    this.startAutoSlide();
+  }
+
+  startAutoSlide(): void {
+    this.interval = setInterval(() => {
+      this.nextTestimonial();
+    }, 5000); // Cambia cada 5 segundos
+  }
+
+  stopAutoSlide(): void {
+    clearInterval(this.interval);
+  }
+
+  nextTestimonial(): void {
+    this.currentTestimonialIndex =
+      (this.currentTestimonialIndex + 1) % this.testimonials.length;
+  }
+
+  previousTestimonial(): void {
+    this.currentTestimonialIndex =
+      (this.currentTestimonialIndex - 1 + this.testimonials.length) % this.testimonials.length;
+  }
 
 }
