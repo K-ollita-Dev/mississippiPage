@@ -1,7 +1,7 @@
 <div class="card">
     <p-menubar [model]="items">
         <ng-template pTemplate="start">
-            <!-- logo img -->
+            <!-- Logo img a la izquierda -->
             <img id="logo" src="img/logo.png" alt="logo" class="logo" />
         </ng-template>
         <ng-template pTemplate="item" let-item let-root="root">
@@ -20,11 +20,9 @@
                 <span id="menuBarTitle" class="ml-2">{{ item.label }}</span>
             </a>
         </ng-template>
-        <!-- <ng-template pTemplate="end">
-            <div class="flex align-items-center gap-2">
-                <input type="text" pInputText placeholder="Search" class="w-8rem sm:w-auto" />
-                <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle" />
-            </div>
-        </ng-template> -->
+        <ng-template pTemplate="end">
+            <!-- Logo img a la derecha -->
+            <img id="logo" src="img/Fulbright-Hays Logo.png" alt="logo" class="logo" />
+        </ng-template>
     </p-menubar>
 </div>
