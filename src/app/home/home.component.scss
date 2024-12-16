@@ -159,4 +159,83 @@
       }
     }
   }
+
+  .cover-card {
+    position: relative;
+    height: var(--cover-height-desktop);
+    overflow: hidden;
+  
+    @media (max-width: 768px) {
+      height: var(--cover-height-tablet);
+    }
+  
+    @media (max-width: 480px) {
+      height: var(--cover-height-mobile);
+    }
+  
+    .image-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        opacity: 0; // Imágenes no activas son invisibles
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.5s ease; // Transición suave entre imágenes
+      }
+  
+      img.active {
+        opacity: 1; // Imagen activa visible
+        animation: mosaic 1s ease-in-out;
+      }
+    }
+  
+    mat-card-content {
+      position: absolute;
+      bottom: 20px;
+      color: var(--cover-content-color);
+      padding: var(--cover-content-padding-desktop);
+      z-index: 2;
+      max-width: 80%;
+      text-align: center;
+      animation: fadeIn 0.5s ease-in-out; // Añade animación para el texto
+  
+      @media (max-width: 768px) {
+        padding: var(--cover-content-padding-mobile);
+      }
+  
+      @media (max-width: 480px) {
+        padding: var(--cover-content-padding-mobile);
+      }
+    }
+  
+    // Animación de mosaico para la transición de imágenes
+    @keyframes mosaic {
+      0% {
+        clip-path: inset(50% 50% 50% 50%);
+      }
+      100% {
+        clip-path: inset(0% 0% 0% 0%);
+      }
+    }
+  
+    // Animación de desvanecimiento para el texto
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px); // Desciende ligeramente al aparecer
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0); // Posición original
+      }
+    }
+  }
+  
   

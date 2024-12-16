@@ -1,9 +1,16 @@
 <mat-card class="cover-card">
-  <img mat-card-image src="img/Home.jpg" alt="Imagen de portada" />
+  <div class="image-container">
+    <img *ngFor="let img of images; let i = index"
+         mat-card-image
+         [src]="img"
+         [alt]="'Imagen ' + (i + 1)"
+         [ngClass]="{ 'active': i === currentImageIndex }" />
+  </div>
   <mat-card-content>
-    <h1>Fulbright-Hays in Bolivia</h1>
+    <h1>{{ texts[currentImageIndex] }}</h1>
   </mat-card-content>
 </mat-card>
+
 <mat-card-title id="main_title">
   Fulbright-Hays Student Exchange Program in Bolivia 2024
 </mat-card-title>  

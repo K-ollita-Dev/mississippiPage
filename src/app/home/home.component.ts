@@ -27,6 +27,21 @@ export class HomeComponent {
   [x: string]: any;
   selectedFilter: string = 'all';
 
+  images = ['img/Home.jpg', 'img/airportlpb.jpeg']; // Rutas de las imágenes
+  texts = ['Fulbright-Hays in Bolivia', 'Wait for Us, Fulbrighthuys 2026, is Comming....']; // Textos asociados a cada imagen
+
+  currentImageIndex = 0;
+
+  constructor() {
+    this.startImageTransition();
+  }
+
+  startImageTransition() {
+    setInterval(() => {
+      this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
+    }, 5000); // Cambia cada 5 segundos
+  }
+
   // Lista de imágenes con sus respectivas etiquetas
   photos = [
     { src: 'img/gallery/img1.jpg', alt: 'Naturaleza 1', tags: 'adventuresAndExplorations', name: 'Culture and Traditions | Salar de Uyuni' },
