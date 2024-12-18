@@ -30,7 +30,7 @@ import { MatTabGroup, MatTabsModule } from '@angular/material/tabs';
 export class FamiliesComponent {
   testimonials = [
     {
-      image: 'favicon.ico',
+      image: 'img/Familia Fernandez.jpg',
       title: 'Familia Roció Fernandez',
       subtitle: 'Andrew Purcell',
       content: '  "Andrew was warmly welcomed into the family. He was a very disciplined' +
@@ -39,7 +39,7 @@ export class FamiliesComponent {
         'We would happily repeat the experience as it was a pleasure having him in our home."'
     },
     {
-      image: 'favicon.ico',
+      image: 'img/Familia Zapana.jpg',
       title: 'Familia Zapata',
       sub: 'Renne Fox',
       content: '"Our exchange student from the University of Mississippi, Renne, was a truly' +
@@ -52,7 +52,7 @@ export class FamiliesComponent {
         'new insights and a friendship that will last."'
     },
     {
-      image: 'favicon.ico',
+      image: '/img/Familia Rivero.jpg',
       title: 'Familia Rivero',
       sub: 'Anthony Gonzales',
       content: '"Anthony G., a young man who spoke Spanish very well, gained the confidence to be' +
@@ -66,7 +66,7 @@ export class FamiliesComponent {
         'activities organized by the university."'
     },
     {
-      image: 'favicon.ico',
+      image: 'img/Familia Sarmiento.jpg',
       title: 'Familia Sarmiento',
       sub: 'Sydney Smith',
       content: '"She was a bright and kind young woman with a wonderful command of Spanish, which made it'+
