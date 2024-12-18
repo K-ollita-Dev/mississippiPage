@@ -28,7 +28,7 @@ export class HomeComponent {
   selectedFilter: string = 'all';
 
   images = ['img/Home.jpg', 'img/airportlpb.jpeg']; // Rutas de las imágenes
-  texts = ['Fulbright-Hays in Bolivia', 'Wait for Us, Fulbrighthuys 2026, is Comming....']; // Textos asociados a cada imagen
+  texts = ['Fulbright-Hays in Bolivia', 'Wait for Us, Fulbright-Hays 2026, is Comming....']; // Textos asociados a cada imagen
 
   currentImageIndex = 0;
 
