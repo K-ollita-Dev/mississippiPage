@@ -124,16 +124,20 @@ University Experience
 </div>
 
       <!-- Botón centrado -->
-      <button mat-fab extended [routerLink]="'/media'">
-        Go to Gallery to view more photos of the Fulbright-Hays Program
-      </button>
-      
+      <button 
+      class="btn-gallery styled-btn" 
+      mat-fab 
+      extended 
+      [routerLink]="'/media'">
+      Go to Gallery to view more photos of the Fulbright-Hays Program
+    </button>
   
 </mat-card>
+<mat-card-title id="main_title">
+  Testimonials
+</mat-card-title>
 <mat-card id="section5">
-  <mat-card-title id="main_title">
-    Testimonials
-  </mat-card-title>
+
   <div class="carousel">
     <div class="testimonial" *ngIf="testimonials[currentTestimonialIndex]">
       <img
@@ -156,8 +160,9 @@ Additional Information
 </mat-card-title>
 <mat-card id="section6">
     <mat-card-content class="card-content" >
-    <iframe class="video" src="video/intro_home.mp4"
+    <iframe class="video" src="video/intro_home.mp4 "
         title="YouTube video player" frameborder="0"
+        
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>

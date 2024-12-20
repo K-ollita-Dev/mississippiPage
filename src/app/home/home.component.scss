@@ -96,14 +96,14 @@
   // espacio
   
   #section5{
-    margin-top: 5%;
+    margin-top: 2%;
   }
   .carousel {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -123,14 +123,14 @@
       }
   
       .testimonial-title {
-        font-size: 1.5em;
+        font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 10px;
         color: #333;
       }
   
       .testimonial-content {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         line-height: 1.5;
         color: #666;
       }
@@ -195,7 +195,7 @@
         animation: mosaic 1s ease-in-out;
       }
     }
-  
+
     mat-card-content {
       position: absolute;
       bottom: 20px;
@@ -237,5 +237,28 @@
       }
     }
   }
+  .styled-btn {
+    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Degradado */
+    color: white; /* Texto blanco */
+    font-size: 1.2rem; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    padding: 12px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Sombra */
+    transition: all 0.3s ease; /* Animación */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor tipo mano */
+    text-transform: none; /* Evita texto en mayúsculas */
+  }
   
+  .styled-btn:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb); /* Efecto inverso */
+    transform: translateY(-3px); /* Eleva el botón al pasar el ratón */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Más sombra */
+  }
+  
+  .styled-btn:active {
+    transform: translateY(0); /* Restablece la posición al hacer clic */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Sombra original */
+  }
   

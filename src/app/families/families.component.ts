@@ -52,7 +52,7 @@ export class FamiliesComponent {
         'new insights and a friendship that will last."'
     },
     {
-      image: '/img/Familia Rivero.jpg',
+      image: 'img/Familia Rivero.jpg',
       title: 'Familia Rivero',
       sub: 'Anthony Gonzales',
       content: '"Anthony G., a young man who spoke Spanish very well, gained the confidence to be' +
