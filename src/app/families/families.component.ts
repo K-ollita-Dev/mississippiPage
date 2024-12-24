@@ -40,7 +40,7 @@ export class FamiliesComponent {
     },
     {
       image: 'img/Familia Zapana.jpg',
-      title: 'Familia Zapata',
+      title: 'Familia Zapana',
       sub: 'Renne Fox',
       content: '"Our exchange student from the University of Mississippi, Renne, was a truly' +
         'enriching and memorable experience. From the very first day, Renne exhibited ' +
